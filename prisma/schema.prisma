@@ -9,6 +9,27 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id         String   @id @default(uuid())
+  email      String   @unique
+  name       String
+  username   String   @unique
+  cretatedAt DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  tasks Task[]
+}
+
+model Task {
+  id     String @id @default(uuid())
+  title  String
+  User   User   @relation(fields: [userId], references: [id])
+  userId String
+
+  @@index([userId])
 }
