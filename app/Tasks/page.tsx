@@ -1,8 +1,7 @@
 import React from 'react'
 
-type Props = {}
 
-const TaskPage = (props: Props) => {
+const TaskPage = () => {
     return (
         <div>TaskPage</div>
     )
