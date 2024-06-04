@@ -4,19 +4,20 @@ type Props = {}
 
 const DashboardSidebar = (props: Props) => {
     return (
-        <div className='w-[4rem] md:w-[10rem] border-r-[0.1rem] h-screen bg-black'>
-
-            <div className='md:hidden flex flex-col items-center gap-4 p-2'>
-                <div>icon</div>
-                <div>icon</div>
-                <div>icon</div>
+        <div className="drawer w-14">
+            <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
+                {/* Page content here */}
+                <label htmlFor="my-drawer" className="btn btm-nav-xs drawer-button">🍔</label>
             </div>
-            <div className='md:block hidden'>
-                <div className='flex flex-col gap-4 p-4 items-center'>
-                    <div>icon name</div>
-                    <div>icon name</div>
-                    <div>icon name</div>
-                </div>
+            <div className="drawer-side">
+                <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+                <ul className="menu p-4 w-56 min-h-full bg-base-200 text-base-content">
+                    {/* Sidebar content here */}
+                    <li><a>Sidebar Item 1</a></li>
+                    <li><a>Sidebar Item 2</a></li>
+
+                </ul>
             </div>
         </div>
     )
