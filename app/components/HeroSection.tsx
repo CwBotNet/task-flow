@@ -4,7 +4,7 @@ type Props = {}
 
 const HeroSection = (props: Props) => {
     return (
-        <div className=' flex justify-center items-center h-full mt-[4.4rem]'>
+        <div className=' flex justify-center items-center h-full pt-[4.4rem]'>
             <div className='p-8 pt-24  '>
                 <div className='text-center'>
                     <h1 className='text-4xl space-x-1 tracking-wider font-bold'>
